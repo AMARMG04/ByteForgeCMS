@@ -5,7 +5,7 @@ const TopBar = () => {
         <div>
             <div className='flex justify-between items-center'>
                 <div>
-                    <h1 className='text-4xl font-medium inline-block'>Hello</h1><span className='text-4xl font-normal ml-2'>Kalvidhasan S</span>
+                    <h1 className='text-4xl font-medium inline-block'>Hello</h1><span className='text-4xl font-normal ml-2'>Mahesh Kumar</span>
                     <p>Welcome Back!</p>
                 </div>
                 <div className='flex gap-4'>
