@@ -46,56 +46,56 @@ const page = async () => {
                     <h1 className='mt-4 text-2xl font-medium'>Products</h1>
                     <div className='mt-4 flex flex-col gap-8'>
                         <Link href="/products/addNewProduct">
-                        <button className='bg-black text-white p-20 text-xl font-medium rounded-md w-96'>
-                            Add Product
-                        </button>
+                            <button className='bg-black text-white p-20 text-xl font-medium rounded-md w-96'>
+                                Add Product
+                            </button>
                         </Link>
 
-                            <div className='overflow-x-auto overflow-y-auto py-2 border border-black'>
-                                <table className="table-auto w-full rounded-2xl">
-                                    <thead className='font-semibold'>
-                                        <tr>
-                                            <th className="py-4 px-4 ">S.No</th>
-                                            <th className="py-4 px-4 ">Product</th>
-                                            <th className="py-4 px-4 ">Category</th>
-                                            <th className="py-4 px-4 ">Price</th>
-                                            <th className="py-4 px-4 ">Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="">
-                                        {products.map((item: any, index: any) => (
-                                            <tr key={index} className='text-center font-medium'>
-                                                <td className="">{index+1}</td>
-                                                <td className="py-4 px-4 flex gap-5 items-center">
-                                                    <div className='relative w-[50px] h-[50px]'>
-                                                    <Image 
+                        <div className='my-4 block w-full overflow-x-auto  overflow-y-auto shadow-lg rounded-sm'>
+                            <table className="items-center w-full bg-transparent border-collapse">
+                                <thead className='border-b-2 border-black w-full p-10'>
+                                    <tr>
+                                        <th className="px-6 align-middle py-3 text-md capitalize whitespace-nowrap font-semibold text-left">S.No</th>
+                                        <th className="px-6 align-middle py-3 text-md capitalize whitespace-nowrap font-semibold text-left">Product</th>
+                                        <th className="px-6 align-middle py-3 text-md capitalize whitespace-nowrap font-semibold text-left">Category</th>
+                                        <th className="px-6 align-middle py-3 text-md capitalize whitespace-nowrap font-semibold text-left">Price</th>
+                                        <th className="px-6 align-middle py-3 text-md capitalize whitespace-nowrap font-semibold text-left">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="">
+                                    {products.map((item: any, index: any) => (
+                                        <tr key={index} className='border-b-2'>
+                                            <td className="px-6 align-middle font-medium text-md p-4 text-left items-center">{index + 1}</td>
+                                            <td className="px-6 align-middle font-medium text-md p-4 text-left flex gap-5 items-center">
+                                                <div className='relative w-[50px] h-[50px]'>
+                                                    <Image
                                                         src={item.images[0]}
                                                         fill
                                                         alt={item.name}
                                                         className="object-scale-down"
                                                     />
-                                                    </div>
-                                                    {item.brand.charAt(0) + item.brand.slice(1).toLowerCase() + " " + item.name}
-                                                </td>
-                                                <td>
-                                                    {item.category.charAt(0).toUpperCase() + item.category.slice(1)}
-                                                </td>
-                                                <td>
-                                                    {formatCurrency(item.mrp)}
-                                                </td>
-                                                <td className='flex justify-center gap-4'>    
-                                                    <div className='bg-black w-10 h-10 flex items-center justify-center rounded-md'>
-                                                    <Image 
+                                                </div>
+                                                {item.brand.charAt(0) + item.brand.slice(1).toLowerCase() + " " + item.name}
+                                            </td>
+                                            <td className='px-6 align-middle font-medium text-md p-4 text-left'>
+                                                {item.category.charAt(0).toUpperCase() + item.category.slice(1)}
+                                            </td>
+                                            <td className='px-6 align-middle font-medium text-md p-4 text-left'>
+                                                {formatCurrency(item.mrp)}
+                                            </td>
+                                            <td className='px-6 align-middle font-medium text-md p-4 text-left flex items-center gap-4'>
+                                                <div className='bg-black w-10 h-10 flex items-center justify-center rounded-md'>
+                                                    <Image
                                                         src="/assets/edit.png"
                                                         width={24}
                                                         height={24}
                                                         alt={item.name}
                                                         className="object-scale-down"
                                                     />
-                                                    </div>
-                                                    
-                                                    <div className='bg-black w-10 h-10 flex items-center text-white justify-center rounded-md'>
-                                                    <Image 
+                                                </div>
+
+                                                <div className='bg-black w-10 h-10 flex items-center text-white justify-center rounded-md'>
+                                                    <Image
                                                         src="/assets/delete.png"
                                                         width={24}
                                                         height={24}
@@ -103,9 +103,9 @@ const page = async () => {
                                                         className="object-scale-down"
                                                     />
 
-                                                    </div>
-                                                    <div className='bg-black w-10 h-10 flex items-center justify-center rounded-md'>
-                                                    <Image 
+                                                </div>
+                                                <div className='bg-black w-10 h-10 flex items-center justify-center rounded-md'>
+                                                    <Image
                                                         src="/assets/view.png"
                                                         width={24}
                                                         height={24}
@@ -113,14 +113,14 @@ const page = async () => {
                                                         className="object-scale-down"
                                                     />
 
-                                                    </div>
-                                                    
-                                                </td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
 
                     </div>
                 </div>
