@@ -71,9 +71,9 @@ export const addToDB = async (formdata: FormData) => {
   const description = formdata.get("productDescription");
   const category = formdata.get("productCategory");
   const quantity = formdata.get("productQuantity");
-  const mrp = formdata.get("productMRP");
-  const discount_percentage = formdata.get("discountPercentage");
-  const discounted_price = formdata.get("discountedPrice");
+  const mrp = Number(formdata.get("productMRP"));
+  const discount_percentage = Number(formdata.get("discountPercentage"));
+  const discountedPrice = Number(formdata.get("discountedPrice"));
   const configuration = processConfigurationData(data);
   const specifications = processSpecificationData(data);
   const reviews = "None";

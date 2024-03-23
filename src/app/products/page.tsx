@@ -84,7 +84,7 @@ const page = async () => {
                                                 {formatCurrency(item.mrp)}
                                             </td>
                                             <td className='px-6 align-middle font-medium text-md p-4 text-left flex items-center gap-4'>
-                                                <div className='bg-black w-10 h-10 flex items-center justify-center rounded-md'>
+                                                <div className='bg-black hover:bg-green-400 w-10 h-10 flex items-center justify-center rounded-md'>
                                                     <Image
                                                         src="/assets/edit.png"
                                                         width={24}
@@ -94,7 +94,7 @@ const page = async () => {
                                                     />
                                                 </div>
 
-                                                <div className='bg-black w-10 h-10 flex items-center text-white justify-center rounded-md'>
+                                                <div className='bg-black hover:bg-red-600 w-10 h-10 flex items-center text-white justify-center rounded-md'>
                                                     <Image
                                                         src="/assets/delete.png"
                                                         width={24}
@@ -104,7 +104,7 @@ const page = async () => {
                                                     />
 
                                                 </div>
-                                                <div className='bg-black w-10 h-10 flex items-center justify-center rounded-md'>
+                                                {/* <div className='bg-black w-10 h-10 flex items-center justify-center rounded-md'>
                                                     <Image
                                                         src="/assets/view.png"
                                                         width={24}
@@ -113,7 +113,7 @@ const page = async () => {
                                                         className="object-scale-down"
                                                     />
 
-                                                </div>
+                                                </div> */}
 
                                             </td>
                                         </tr>
